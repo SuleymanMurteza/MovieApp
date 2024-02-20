@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_act_nav"
+    app:startDestination="@id/filmlerFragment">
+
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.filmleruygulamasi.ui.fragments.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="filmler"
+            app:argType="com.example.filmleruygulamasi.data.entity.FilmlerData" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmlerFragment"
+        android:name="com.example.filmleruygulamasi.ui.fragments.FilmlerFragment"
+        android:label="fragment_filmler"
+        tools:layout="@layout/fragment_filmler" >
+        <action
+            android:id="@+id/gecisDetay"
+            app:destination="@id/detayFragment" />
+    </fragment>
+</navigation>
